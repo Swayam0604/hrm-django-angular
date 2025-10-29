@@ -1,0 +1,8 @@
+"# HRM Django Angular" 
+"" 
+"Human Resource Management System with Django REST Framework and Angular." 
+"" 
+"## Project Structure"  
+"- backend/ - Django REST API"  
+"- Frontend/ - Angular application"  
+"- docs/ - Documentation and Screenshorts"  
