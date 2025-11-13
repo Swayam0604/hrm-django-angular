@@ -3,7 +3,7 @@ from django.utils import timezone
 
 class Department(models.Model):
     dept_name = models.CharField(max_length=100, unique=True)
-    description = models.CharField(max_length=300, blank=True),
+    description = models.CharField(max_length=300, blank=True)
     status = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

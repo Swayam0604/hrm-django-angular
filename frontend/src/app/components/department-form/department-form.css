@@ -1,0 +1,4 @@
+.form-page { min-height: 100vh; background: #f6f8fb; padding: 24px; display: grid; place-items: start center; }
+.form-card { width: 720px; max-width: 100%; padding: 20px; }
+.full { width: 100%; }
+.actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; }

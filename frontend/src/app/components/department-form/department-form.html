@@ -1,0 +1,28 @@
+<div class="form-page">
+  <mat-card class="mat-elevation-z2 form-card">
+    <h2>{{ title }}</h2>
+
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Department Name</mat-label>
+        <input matInput formControlName="dept_name" placeholder="e.g., Human Resources" />
+        <mat-error *ngIf="form.controls['dept_name']?.hasError('required')">Name is required</mat-error>
+        <mat-error *ngIf="form.controls['dept_name']?.hasError('minlength')">Minimum 2 characters</mat-error>
+        <mat-error *ngIf="form.controls['dept_name']?.hasError('maxlength')">Max 100 characters</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Description</mat-label>
+        <textarea matInput rows="3" formControlName="description" placeholder="Short description"></textarea>
+        <mat-hint align="end">{{ form.controls['description']?.value?.length || 0 }}/300</mat-hint>
+      </mat-form-field>
+
+      <div class="actions">
+        <button mat-stroked-button type="button" (click)="cancel()">Cancel</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="submitting">
+          {{ id ? 'Update' : 'Create' }}
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>
