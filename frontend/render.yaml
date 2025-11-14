@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hrm-frontend
+    env: static
+    buildCommand: npm ci && npm run build -- --configuration production
+    staticPublishPath: ./dist/frontend
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
