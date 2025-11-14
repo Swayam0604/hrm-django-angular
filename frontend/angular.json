@@ -29,6 +29,9 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/",
+              "optimization": true,
+              "sourceMap": false,
               "budgets": [
                 {
                   "type": "initial",
